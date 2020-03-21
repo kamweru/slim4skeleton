@@ -15,11 +15,14 @@ final class UserCreateData
     public $username;
 
     /** @var string */
-    public $firstName;
+    public $firstname;
 
     /** @var string */
-    public $lastName;
+    public $lastname;
 
     /** @var string */
     public $email;
+
+    /** @var string */
+    public $password;
 }

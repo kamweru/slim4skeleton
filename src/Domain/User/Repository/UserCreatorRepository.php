@@ -43,16 +43,18 @@ class UserCreatorRepository
     {
         $row = [
             'username' => $user->username,
-            'first_name' => $user->firstName,
-            'last_name' => $user->lastName,
+            'first_name' => $user->firstname,
+            'last_name' => $user->lastname,
             'email' => $user->email,
+            'password' => $user->password
         ];
 
         $sql = "INSERT INTO users SET 
                 username=:username, 
-                first_name=:first_name, 
-                last_name=:last_name, 
-                email=:email;";
+                firstname=:first_name, 
+                lastname=:last_name, 
+                email=:email, 
+                password=:password;";
 
         $this->connection->prepare($sql)->execute($row);
 
